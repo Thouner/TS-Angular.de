@@ -1,5 +1,3 @@
 <div class="slide_container">
-    <!-- <img class="slide_image" src="assets/img/image-slide (1).jpg" alt=""> -->
-    <img class="slide_image" src="assets/img/{{slideImages[0]}}" alt="">
-    <!-- <img class="slide_image" src="{{slideImages[2]}}" alt=""> -->
+    <img *ngIf="showImage" class="slide_image" src="assets/img/{{slideImages[currendImage]}}" alt="">
 </div>

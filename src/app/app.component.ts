@@ -6,23 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'TS-Agular.de';
+  // title = 'TS-Agular.de';
   slideImages = ['image-slide (1).jpg','image-slide (2).jpg','image-slide (3).jpg'];
   currendImage = 0;
+  showImage = true;
 
 ngOnInit() {
-  // this.UpdateImage();
+  this.UpdateImage();
 }
 
 
-// UpdateImage() {
+UpdateImage() {
 
-// setInterval(() => {
-//   this.currendImage++;
-//   this.currendImage = this.currendImage % this.slideImages.length;
-// }, 5000);
+setInterval(() => {
+  this.currendImage++;
+  this.currendImage = this.currendImage % this.slideImages.length;
+  this.showImage = false;
+  setTimeout(()=> {
+    this.showImage = true;
+  });
+}, 5000);
 
-// }
+}
 
 
 
