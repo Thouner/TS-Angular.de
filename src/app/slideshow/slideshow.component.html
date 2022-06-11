@@ -1,0 +1,9 @@
+<div class="slide_container">
+    <img *ngIf="showImage" class="slide_image" src="assets/img/{{slideImages[currendImage]}}" alt="">
+</div>
+
+<div class="slide_container slidesshow-overlay">
+    <span *ngIf="showImage" class="fadeIn">
+ {{slideTitle[currendImage]}}
+</span>
+</div>
