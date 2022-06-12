@@ -1,13 +1,17 @@
 header {
+    z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 80px;
-    margin: 0 5%;
+    padding: 0 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    img {
+        cursor: pointer;
+    }
     a {
         margin-left: 20px;
         text-decoration: none;
@@ -16,4 +20,18 @@ header {
             color: rgb(170, 170, 170);
         }
     }
+}
+
+.darkLinks {
+    a {
+        color: black;
+        &:hover {
+            color: rgb(60, 60, 60);
+        }
+    }
+}
+
+.headerDark {
+    background: white;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
 }
